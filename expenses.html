@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOOR SUPER MART - Expenses (খরচের হিসাব)</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Header Navbar -->
+    <header class="top-header bg-white border-bottom sticky-top px-3 py-2 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-2 gap-md-3">
+            <button class="btn btn-sm btn-outline-secondary d-lg-none" id="sidebarToggle" type="button">
+                <i data-lucide="menu" class="icon-sm"></i>
+            </button>
+            <div>
+                <h1 class="h6 fw-bold mb-0 text-dark d-none d-md-block text-truncate" style="max-width: 150px;">NOOR SUPER MART</h1>
+                <small class="text-muted d-none d-sm-block" style="font-size: 10px; letter-spacing: 0.5px;">B2B DISTRIBUTION SYSTEM</small>
+            </div>
+            <div class="vr mx-2 d-none d-md-block"></div>
+            <div class="d-none d-md-flex align-items-center gap-1 text-muted small">
+                <span>Active Module:</span>
+                <strong class="text-dark">Expenses (খরচের হিসাব)</strong>
+            </div>
+        </div>
+
+        <div class="d-none d-xl-flex align-items-center gap-3">
+            <span class="badge bg-emerald-subtle text-emerald border border-emerald-subtle rounded-pill px-3 py-1 fw-medium d-flex align-items-center gap-2">
+                <span class="status-dot"></span> Haji Noor Mohammad
+            </span>
+            <span class="text-muted small font-mono">Central HQ / All Zones</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+            <div class="bg-light border rounded px-2 py-1 d-flex align-items-center gap-2">
+                <span class="text-muted small d-none d-sm-inline"><i data-lucide="repeat" class="icon-xs me-1"></i>Role Switch:</span>
+                <select class="form-select form-select-sm border-0 bg-transparent fw-semibold text-dark py-0 ps-1 pe-4 shadow-none" style="width: auto; font-size: 12px;">
+                    <option>Haji Noor Mohammad (Owner / Admin)</option>
+                    <option>Depot Manager</option>
+                    <option>Sales Executive</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-wrapper d-flex">
+          <!-- Sidebar Navigation -->
+        <aside class="sidebar bg-slate-900 text-white d-flex flex-column justify-content-between" id="sidebar">
+            <div>
+                <!-- Brand Box -->
+                <div class="p-3 border-bottom border-secondary border-opacity-25 d-flex align-items-center gap-2">
+                    <div
+                        class="brand-badge bg-emerald text-white fw-bold rounded d-flex align-items-center justify-content-center">
+                        NSM
+                    </div>
+                    <div>
+                        <div class="fw-bold small lh-1">NOOR SUPER MART</div>
+                        <small class="text-secondary" style="font-size: 10px;">B2B Core ERP v1.0</small>
+                    </div>
+                </div>
+
+                <!-- Active Role Box -->
+                <div class="p-3">
+                    <div class="role-card p-2 rounded bg-slate-800 border border-secondary border-opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-secondary" style="font-size: 10px; font-weight: 600;">ACTIVE ROLE</span>
+                            <span class="badge bg-emerald text-white" style="font-size: 9px;">OWNER</span>
+                        </div>
+                        <div class="fw-semibold small text-white">Haji Noor Mohammad</div>
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="px-2">
+                    <div class="text-secondary px-2 mb-1"
+                        style="font-size: 10px; font-weight: 600; letter-spacing: 0.5px;">MAIN NAVIGATION</div>
+                    <ul class="nav flex-column sidebar-nav gap-1">
+                        <li class="nav-item">
+                            <a href="index.html"
+                                class="nav-link  d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="layout-dashboard" class="icon-sm me-2"></i>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="products.html" class="nav-link d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="package" class="icon-sm me-2"></i>Products</span>
+                                <span class="badge rounded-pill bg-warning text-dark">2</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="purchase.html" class="nav-link"><i data-lucide="shopping-bag"
+                                    class="icon-sm me-2"></i>Purchase</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="stock.html" class="nav-link"><i data-lucide="boxes"
+                                    class="icon-sm me-2"></i>Stock</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customers.html" class="nav-link"><i data-lucide="users"
+                                    class="icon-sm me-2"></i>Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="salesmen.html" class="nav-link"><i data-lucide="user-check"
+                                    class="icon-sm me-2"></i>Salesmen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="orders.html" class="nav-link d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="clipboard-list" class="icon-sm me-2"></i>Orders</span>
+                                <span class="badge rounded-pill bg-warning text-dark">1</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="delivery.html" class="nav-link"><i data-lucide="truck"
+                                    class="icon-sm me-2"></i>Delivery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="returns.html" class="nav-link"><i data-lucide="rotate-ccw"
+                                    class="icon-sm me-2"></i>Returns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="payments.html" class="nav-link"><i data-lucide="credit-card"
+                                    class="icon-sm me-2"></i>Payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="ledger.html" class="nav-link "><i data-lucide="book-open"
+                                    class="icon-sm me-2"></i>Ledger</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="expenses.html" class="nav-link active"><i data-lucide="receipt"
+                                    class="icon-sm me-2"></i>Expenses
+                                (খরচ)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reports.html" class="nav-link"><i data-lucide="bar-chart-2"
+                                    class="icon-sm me-2"></i>Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="users.html" class="nav-link"><i data-lucide="user-cog"
+                                    class="icon-sm me-2"></i>Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="settings.html" class="nav-link"><i data-lucide="settings"
+                                    class="icon-sm me-2"></i>Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar Footer -->
+            <div class="p-3 border-top border-secondary border-opacity-25 mt-3">
+                <div class="d-flex align-items-center gap-2 text-emerald small fw-medium mb-1" style="font-size: 11px;">
+                    <i data-lucide="refresh-cw" class="icon-xs"></i> Automatic Ledger Sync
+                </div>
+                <p class="text-secondary mb-0" style="font-size: 10px; line-height: 1.3;">
+                    Single-entry system. No manual ledger calculation required.
+                </p>
+            </div>
+        </aside>
+
+        <!-- Sidebar Backdrop for Mobile -->
+        <div class="sidebar-backdrop d-lg-none" id="sidebarBackdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content flex-grow-1 p-3 p-md-4 bg-light-subtle">
+            <div class="container-fluid px-0" style="max-width: 1400px;">
+
+                <!-- Top Header Banner -->
+                <div class="card border-0 shadow-xs mb-4">
+                    <div class="card-body p-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                        <div>
+                            <h2 class="h5 fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+                                <i data-lucide="receipt" class="text-emerald"></i> খরচের সহজ হিসাব (Expense Management)
+                            </h2>
+                            <p class="text-muted small mb-0">নূর সুপার মার্ট – দৈনন্দিন অফিস, স্টক, পরিবহন ও পরিচালনা খরচের হিসাব।</p>
+                        </div>
+                        <div>
+                            <span class="badge bg-light border text-dark px-3 py-2 font-mono shadow-none" style="font-size: 11px;">
+                                <i data-lucide="calendar" class="icon-xs me-1 text-muted"></i> আজকের তারিখ: ৩ নভেম্বর, ২০২৬
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Cards Row -->
+                <div class="row g-3 mb-4">
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0 shadow-xs h-100">
+                            <div class="card-body p-4 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted d-block mb-1" style="font-size: 11px; font-weight: 500;">আজকের মোট খরচ</span>
+                                    <h3 class="fw-bold font-mono text-dark mb-1">৳ 55</h3>
+                                    <small class="text-success fw-medium" style="font-size: 10px;">সফলভাবে সংরক্ষিত খরচ</small>
+                                </div>
+                                <div class="p-3 bg-emerald-subtle text-emerald rounded-3">
+                                    <i data-lucide="dollar-sign" class="icon-md"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0 shadow-xs h-100">
+                            <div class="card-body p-4 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted d-block mb-1" style="font-size: 11px; font-weight: 500;">চলতি মাসের মোট খরচ</span>
+                                    <h3 class="fw-bold font-mono text-dark mb-1">৳ 55</h3>
+                                    <small class="text-muted font-mono" style="font-size: 10px;">নভেম্বর ২০২৬</small>
+                                </div>
+                                <div class="p-3 bg-primary-subtle text-primary rounded-3">
+                                    <i data-lucide="calendar" class="icon-md"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0 shadow-xs h-100">
+                            <div class="card-body p-4 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted d-block mb-1" style="font-size: 11px; font-weight: 500;">সর্বমোট খরচ</span>
+                                    <h3 class="fw-bold font-mono text-dark mb-1">৳ 55</h3>
+                                    <small class="text-muted" style="font-size: 10px;">মোট ১টি খাতের যোগফল</small>
+                                </div>
+                                <div class="p-3 bg-warning-subtle text-warning-emphasis rounded-3">
+                                    <i data-lucide="file-text" class="icon-md"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Expense Entry Section -->
+                <div class="card border-0 shadow-xs mb-4">
+                    <div class="card-header bg-emerald text-white py-3 px-4 d-flex align-items-center justify-content-between" style="background-color: #059669 !important;">
+                        <h6 class="fw-bold mb-0" style="font-size: 13px;"><i data-lucide="plus-circle" class="icon-xs me-1"></i> নতুন খরচ এন্ট্রি</h6>
+                        <span style="font-size: 11px;" class="font-mono opacity-75">তারিখ ও সময় স্বয়ংক্রিয়ভাবে সংরক্ষিত হবে</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-12 col-lg-6">
+                                <label class="form-label fw-semibold text-dark mb-2" style="font-size: 12px;">১. খরচের বিবরণ *</label>
+                                <input type="text" class="form-control form-control-sm mb-2 py-2" placeholder="যেমন: স্টাফের বেতন, অফিস ভাড়া, গাড়ি মেরামত, অন্যান্য খরচ...">
+                                <div class="d-flex flex-wrap gap-1 align-items-center pt-1" style="font-size: 11px;">
+                                    <span class="text-muted me-1">সহজে নির্বাচন:</span>
+                                    <button type="button" class="badge bg-light border text-dark px-2 py-1 fw-normal">স্টাফের বেতন</button>
+                                    <button type="button" class="badge bg-light border text-dark px-2 py-1 fw-normal">অফিস ভাড়া</button>
+                                    <button type="button" class="badge bg-light border text-dark px-2 py-1 fw-normal">গাড়ি মেরামত</button>
+                                    <button type="button" class="badge bg-light border text-dark px-2 py-1 fw-normal">বিদ্যুৎ বিল</button>
+                                    <button type="button" class="badge bg-light border text-dark px-2 py-1 fw-normal">চা-নাস্তা</button>
+                                    <button type="button" class="badge bg-light border text-dark px-2 py-1 fw-normal">মেইন্টেনেন্স খরচ</button>
+                                    <button type="button" class="badge bg-light border text-dark px-2 py-1 fw-normal">অন্যান্য খরচ</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label class="form-label fw-semibold text-dark mb-2" style="font-size: 12px;">২. টাকার পরিমাণ *</label>
+                                <input type="number" class="form-control form-control-sm font-mono mb-2 py-2" placeholder="টাকার পরিমাণ লিখুন (যেমন: ১০০০)">
+                                <small class="text-muted font-mono d-block" style="font-size: 11px;">দ্রুত সংগ্রহ লিখুন (যেমন: ৫০০, ১৫২০, ১০০০০)</small>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-3 border-top">
+                            <button type="button" class="btn btn-emerald text-white btn-sm px-4 py-2 fw-semibold bg-emerald d-inline-flex align-items-center gap-1 shadow-xs" style="background-color: #059669 !important; font-size: 12px;">
+                                <i data-lucide="check" class="icon-xs"></i> খরচ সংরক্ষণ করুন
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saved Expenses Table Section -->
+                <div class="card border-0 shadow-xs">
+                    <div class="card-header bg-white py-3 px-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <h6 class="fw-bold text-dark mb-0" style="font-size: 14px;">সংরক্ষিত খরচের তালিকা</h6>
+                            <span class="badge bg-light border text-muted font-mono px-2 py-1" style="font-size: 10px;">১টি রেকর্ড</span>
+                            <small class="text-muted d-none d-lg-inline" style="font-size: 11px;">পূর্বে সংরক্ষিত সমস্ত খরচের ধারাবাহিক বিবরণ</small>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-center gap-2">
+                            <div class="input-group input-group-sm" style="width: 240px;">
+                                <span class="input-group-text bg-white border-end-0 text-muted">
+                                    <i data-lucide="search" class="icon-xs"></i>
+                                </span>
+                                <input type="text" class="form-control border-start-0 ps-0 shadow-none" placeholder="বিবরণ বা তারিখ খুঁজুন..." style="font-size: 11px;">
+                            </div>
+                            <button type="button" class="btn btn-sm btn-light border text-secondary fw-medium px-3 py-1.5" style="font-size: 11px;">সব খরচ</button>
+                            <button type="button" class="btn btn-sm btn-light border text-secondary fw-medium px-3 py-1.5" style="font-size: 11px;">আজকের</button>
+                            <button type="button" class="btn btn-sm btn-dark fw-medium px-3 py-1.5 shadow-xs" style="font-size: 11px;">চলতি মাসের</button>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table align-middle mb-0 custom-table text-nowrap" style="font-size: 12px;">
+                                <thead class="table-light font-mono">
+                                    <tr>
+                                        <th class="py-3 px-3" style="width: 70px;">নং</th>
+                                        <th class="py-3">তারিখ ও সময়</th>
+                                        <th class="py-3">খরচের বিবরণ</th>
+                                        <th class="py-3">এন্ট্রি করেছেন</th>
+                                        <th class="py-3 text-end">টাকার পরিমাণ</th>
+                                        <th class="py-3 text-center" style="width: 100px;">অ্যাকশন</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="font-mono text-muted px-3">1</td>
+                                        <td class="font-mono text-muted"><i data-lucide="calendar" class="icon-xs me-1 text-muted"></i> ৩ নভেম্বর, ২০২৬ - 19:05</td>
+                                        <td class="fw-bold text-dark">চা-নাস্তা</td>
+                                        <td>
+                                            <div class="fw-medium text-dark">Haji Noor Mohammad</div>
+                                        </td>
+                                        <td class="text-end font-mono fw-bold text-dark">৳ 55</td>
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn-xxs btn-outline-danger p-1.5 shadow-none" title="Delete">
+                                                <i data-lucide="trash-2" class="icon-xs"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="table-light">
+                                    <tr>
+                                        <td colspan="4" class="text-end fw-bold text-dark font-mono py-3">তালিকায় প্রদর্শিত মোট খরচ:</td>
+                                        <td class="text-end font-mono fw-bold text-emerald fs-6 py-3">৳ 55</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

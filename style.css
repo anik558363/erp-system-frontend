@@ -368,3 +368,17 @@ body {
     padding: 0.35rem 0.5rem;
     font-size: 12px;
 }
+
+
+/* Center & Enlarge Success Message Inside Modal */
+#orderSuccessAlert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    /* background-color: #f0fdf4 !important;
+    border: 1px solid #bbf7d0 !important; */
+    border-radius: 8px;
+    margin: 10px 0;
+}

@@ -63,7 +63,7 @@ body {
 
 /* Sidebar default for Desktop */
 .sidebar {
-    width: 240px;
+    width: 280px;
     min-height: 100%;
     flex-shrink: 0;
     transition: transform 0.3s ease-in-out;
@@ -443,3 +443,74 @@ body {
 }
 
 
+/* Fix button text disappearance on hover */
+.btn-outline-secondary:hover {
+    background-color: #64748b !important;
+    border-color: #64748b !important;
+    color: #ffffff !important;
+}
+
+.btn-dark:hover {
+    background-color: #1e293b !important;
+    border-color: #1e293b !important;
+    color: #ffffff !important;
+}
+
+
+@media print {
+    /* Hide all dashboard layout elements */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Only show the statement card container */
+    .card:has(.table-responsive), .card:has(.table-responsive) * {
+        visibility: visible;
+    }
+
+    .card:has(.table-responsive) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Hide action buttons and sidebar inside print view */
+    .sidebar, .top-header, .btn, .card:not(:has(.table-responsive)) {
+        display: none !important;
+    }
+}
+
+
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printableStatement, #printableStatement * {
+                visibility: visible;
+            }
+            #printableStatement {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                padding: 10px;
+                background: white !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            /* Prevent unwanted page breaks */
+            table, tr, td, th, .row {
+                page-break-inside: avoid;
+            }
+        }
+    

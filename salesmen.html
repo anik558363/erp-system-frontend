@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOOR SUPER MART - Salesman Field Console & Performance Ledger</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Header Navbar -->
+    <header
+        class="top-header bg-white border-bottom sticky-top px-3 py-2 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-2 gap-md-3">
+            <button class="btn btn-sm btn-outline-secondary d-lg-none" id="sidebarToggle" type="button">
+                <i data-lucide="menu" class="icon-sm"></i>
+            </button>
+            <div>
+                <h1 class="h6 fw-bold mb-0 text-dark d-none d-md-block text-truncate" style="max-width: 150px;">NOOR
+                    SUPER MART</h1>
+                <small class="text-muted d-none d-sm-block" style="font-size: 10px; letter-spacing: 0.5px;">B2B
+                    DISTRIBUTION SYSTEM</small>
+            </div>
+            <div class="vr mx-2 d-none d-md-block"></div>
+            <div class="d-none d-md-flex align-items-center gap-1 text-muted small">
+                <span>Active Module:</span>
+                <strong class="text-dark">Salesmen</strong>
+            </div>
+        </div>
+
+        <div class="d-none d-xl-flex align-items-center gap-3">
+            <span
+                class="badge bg-emerald-subtle text-emerald border border-emerald-subtle rounded-pill px-3 py-1 fw-medium d-flex align-items-center gap-2">
+                <span class="status-dot"></span> Haji Noor Mohammad
+            </span>
+            <span class="text-muted small font-mono">Central HQ / All Zones</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+            <div class="bg-light border rounded px-2 py-1 d-flex align-items-center gap-2">
+                <span class="text-muted small d-none d-sm-inline"><i data-lucide="repeat" class="icon-xs me-1"></i>Role
+                    Switch:</span>
+                <select
+                    class="form-select form-select-sm border-0 bg-transparent fw-semibold text-dark py-0 ps-1 pe-4 shadow-none"
+                    style="width: auto; font-size: 12px;">
+                    <option>Haji Noor Mohammad (Owner / Admin)</option>
+                    <option>Depot Manager</option>
+                    <option>Sales Executive</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-wrapper d-flex">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar bg-slate-900 text-white d-flex flex-column justify-content-between" id="sidebar">
+            <div>
+                <!-- Brand Box -->
+                <div class="p-3 border-bottom border-secondary border-opacity-25 d-flex align-items-center gap-2">
+                    <div
+                        class="brand-badge bg-emerald text-white fw-bold rounded d-flex align-items-center justify-content-center">
+                        NSM
+                    </div>
+                    <div>
+                        <div class="fw-bold small lh-1">NOOR SUPER MART</div>
+                        <small class="text-secondary" style="font-size: 10px;">B2B Core ERP v1.0</small>
+                    </div>
+                </div>
+
+                <!-- Active Role Box -->
+                <div class="p-3">
+                    <div class="role-card p-2 rounded bg-slate-800 border border-secondary border-opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-secondary" style="font-size: 10px; font-weight: 600;">ACTIVE ROLE</span>
+                            <span class="badge bg-emerald text-white" style="font-size: 9px;">OWNER</span>
+                        </div>
+                        <div class="fw-semibold small text-white">Haji Noor Mohammad</div>
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="px-2">
+                    <div class="text-secondary px-2 mb-1"
+                        style="font-size: 10px; font-weight: 600; letter-spacing: 0.5px;">MAIN NAVIGATION</div>
+                    <ul class="nav flex-column sidebar-nav gap-1">
+                        <li class="nav-item">
+                            <a href="index.html"
+                                class="nav-link active d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="layout-dashboard" class="icon-sm me-2"></i>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="products.html" class="nav-link d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="package" class="icon-sm me-2"></i>Products</span>
+                                <span class="badge rounded-pill bg-warning text-dark">2</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="purchase.html" class="nav-link"><i data-lucide="shopping-bag"
+                                    class="icon-sm me-2"></i>Purchase</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="stock.html" class="nav-link"><i data-lucide="boxes"
+                                    class="icon-sm me-2"></i>Stock</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customers.html" class="nav-link"><i data-lucide="users"
+                                    class="icon-sm me-2"></i>Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="salesmen.html" class="nav-link"><i data-lucide="user-check"
+                                    class="icon-sm me-2"></i>Salesmen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="orders.html" class="nav-link d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="clipboard-list" class="icon-sm me-2"></i>Orders</span>
+                                <span class="badge rounded-pill bg-warning text-dark">1</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="delivery.html" class="nav-link"><i data-lucide="truck"
+                                    class="icon-sm me-2"></i>Delivery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="returns.html" class="nav-link"><i data-lucide="rotate-ccw"
+                                    class="icon-sm me-2"></i>Returns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="payments.html" class="nav-link"><i data-lucide="credit-card"
+                                    class="icon-sm me-2"></i>Payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="ledger.html" class="nav-link"><i data-lucide="book-open"
+                                    class="icon-sm me-2"></i>Ledger</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="expenses.html" class="nav-link"><i data-lucide="receipt"
+                                    class="icon-sm me-2"></i>Expenses
+                                (খরচ)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reports.html" class="nav-link"><i data-lucide="bar-chart-2"
+                                    class="icon-sm me-2"></i>Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="users.html" class="nav-link"><i data-lucide="user-cog"
+                                    class="icon-sm me-2"></i>Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="settings.html" class="nav-link"><i data-lucide="settings"
+                                    class="icon-sm me-2"></i>Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar Footer -->
+            <div class="p-3 border-top border-secondary border-opacity-25 mt-3">
+                <div class="d-flex align-items-center gap-2 text-emerald small fw-medium mb-1" style="font-size: 11px;">
+                    <i data-lucide="refresh-cw" class="icon-xs"></i> Automatic Ledger Sync
+                </div>
+                <p class="text-secondary mb-0" style="font-size: 10px; line-height: 1.3;">
+                    Single-entry system. No manual ledger calculation required.
+                </p>
+            </div>
+        </aside>
+
+        <!-- Sidebar Backdrop for Mobile -->
+        <div class="sidebar-backdrop d-lg-none" id="sidebarBackdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content flex-grow-1 p-3 p-md-4 bg-light-subtle">
+            <div class="container-fluid px-0" style="max-width: 1400px;">
+
+                <!-- Top Header Banner -->
+                <div class="card border-0 shadow-xs mb-4">
+                    <div
+                        class="card-body p-3 p-md-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                        <div>
+                            <h2 class="h5 fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+                                <i data-lucide="user-check" class="text-emerald"></i> SALESMAN FIELD CONSOLE &
+                                PERFORMANCE LEDGER
+                            </h2>
+                            <p class="text-muted small mb-0">Automated salesman metrics, assigned retailer territory,
+                                orders, and due collections.</p>
+                        </div>
+                        <div>
+
+
+                            <button
+                                class="btn btn-emerald btn-sm px-3 text-white bg-emerald ms-auto d-flex align-items-center gap-1"
+                                style="font-size: 12px;" data-bs-toggle="modal" data-bs-target="#fastOrderModal">
+                                <i data-lucide="shopping-cart" class="icon-xs"></i> Take New Order (3-Step)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select Salesman Navigation Tabs -->
+                <div class="card border-0 shadow-xs mb-4">
+                    <div class="card-body p-3">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+                            <span class="text-muted small fw-semibold">Select Salesman:</span>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button
+                                    class="salesman-btn btn btn-sm btn-light border text-secondary px-3 py-1 fw-medium"
+                                    onclick="selectSalesman(0, this)">Rafiqul Islam (Dhanmondi & Mohammadpur)</button>
+                                <button
+                                    class="salesman-btn btn btn-sm btn-dark px-3 py-1 fw-medium shadow-xs active-salesman"
+                                    onclick="selectSalesman(1, this)">Tariqul Alam (Mirpur & Uttara)</button>
+                                <button
+                                    class="salesman-btn btn btn-sm btn-light border text-secondary px-3 py-1 fw-medium"
+                                    onclick="selectSalesman(2, this)">Md. Mizanur Rahman (মিজান) (Gulshan & Badda
+                                    Route)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salesman Profile Info Card (Dynamic) -->
+                <div class="card border-0 shadow-xs mb-4">
+                    <div class="card-body p-3 p-md-4">
+                        <div class="row align-items-center g-3">
+                            <div class="col-12 col-md-5">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div id="salesmanAvatar"
+                                        class="bg-primary text-white fw-bold rounded d-flex align-items-center justify-content-center font-mono"
+                                        style="width: 55px; height: 55px; font-size: 22px;">
+                                        T
+                                    </div>
+                                    <div>
+                                        <h4 id="salesmanName" class="h6 fw-bold text-dark mb-0">Tariqul Alam</h4>
+                                        <small id="salesmanId" class="text-muted font-mono" style="font-size: 11px;">ID:
+                                            user-sales-2</small>
+                                        <div class="text-emerald fw-medium mt-1" style="font-size: 11px;">Active Field
+                                            Sales Representative</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 text-muted small" style="font-size: 12px;">
+                                <div class="d-flex align-items-center gap-2 mb-1">
+                                    <i data-lucide="phone" class="icon-xs text-secondary"></i>
+                                    <span id="salesmanPhone">01622-445566</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 mb-1">
+                                    <i data-lucide="map-pin" class="icon-xs text-secondary"></i>
+                                    <span id="salesmanRoute">Mirpur & Uttara</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <i data-lucide="calendar" class="icon-xs text-secondary"></i>
+                                    <span id="salesmanJoined">Joined: 2022-09-10 | Email:
+                                        tariqul@noorsupermart.com</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="p-3 border rounded bg-light">
+                                    <span class="text-muted d-block font-mono mb-1"
+                                        style="font-size: 10px; font-weight: 600;">ASSIGNED RETAIL STORES</span>
+                                    <span id="salesmanStores" class="h6 fw-bold text-dark mb-0">1 <span
+                                            class="fw-normal text-muted fs-6">Shops</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 Performance Metrics Cards (Dynamic) -->
+                <div class="row g-3 mb-4">
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                        <div class="card border-0 shadow-xs h-100">
+                            <div class="card-body p-3">
+                                <span class="text-muted d-block mb-1 font-mono"
+                                    style="font-size: 10px; font-weight: 600;">TODAY ORDERS</span>
+                                <div id="metricOrders" class="h4 fw-bold text-dark mb-1">8</div>
+                                <span id="metricOrdersAmount" class="text-muted font-mono"
+                                    style="font-size: 10px;">৳20</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                        <div class="card border-0 shadow-xs h-100">
+                            <div class="card-body p-3">
+                                <span class="text-muted d-block mb-1 font-mono"
+                                    style="font-size: 10px; font-weight: 600;">TODAY COLLECTION</span>
+                                <div id="metricCollection" class="h4 fw-bold text-primary mb-1">৳0</div>
+                                <span class="text-muted font-mono" style="font-size: 10px;">0 payments</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                        <div class="card border-0 shadow-xs h-100">
+                            <div class="card-body p-3">
+                                <span class="text-muted d-block mb-1 font-mono"
+                                    style="font-size: 10px; font-weight: 600;">TOTAL GROSS SALES</span>
+                                <div id="metricSales" class="h4 fw-bold text-dark mb-1">৳32</div>
+                                <span id="metricSalesCount" class="text-muted font-mono" style="font-size: 10px;">9
+                                    orders total</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                        <div class="card border-0 shadow-xs h-100">
+                            <div class="card-body p-3">
+                                <span class="text-muted d-block mb-1 font-mono"
+                                    style="font-size: 10px; font-weight: 600;">TOTAL RETURNS</span>
+                                <div id="metricReturns" class="h4 fw-bold text-danger mb-1">৳0</div>
+                                <span class="text-muted font-mono" style="font-size: 10px;">0 return records</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                        <div class="card border-0 shadow-xs h-100">
+                            <div class="card-body p-3">
+                                <span class="text-muted d-block mb-1 font-mono"
+                                    style="font-size: 10px; font-weight: 600;">NET SALES</span>
+                                <div id="metricNetSales" class="h4 fw-bold text-emerald mb-1">৳32</div>
+                                <span class="text-muted font-mono" style="font-size: 10px;">Sales &minus; Returns</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                        <div class="card border-0 shadow-xs h-100">
+                            <div class="card-body p-3">
+                                <span class="text-muted d-block mb-1 font-mono"
+                                    style="font-size: 10px; font-weight: 600;">ACTIVE CUSTOMER DUE</span>
+                                <div id="metricDue" class="h4 fw-bold text-danger mb-1">৳0</div>
+                                <span id="metricDueShops" class="text-muted font-mono" style="font-size: 10px;">1 shops
+                                    due</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-Navigation Dynamic Tabs -->
+                <div class="card border-0 shadow-xs mb-4">
+                    <div class="card-body p-2">
+                        <div class="d-flex flex-wrap gap-2" id="tabContainer">
+                            <button
+                                class="salesman-tab btn btn-sm btn-dark text-white fw-semibold px-3 py-2 bg-dark shadow-xs"
+                                onclick="switchTab(0, this)">Due Summary by Shop (1)</button>
+                            <button class="salesman-tab btn btn-sm btn-light border text-secondary fw-medium px-3 py-2"
+                                onclick="switchTab(1, this)">Assigned Customer Directory (1)</button>
+                            <button class="salesman-tab btn btn-sm btn-light border text-secondary fw-medium px-3 py-2"
+                                onclick="switchTab(2, this)">Order History (9)</button>
+                            <button class="salesman-tab btn btn-sm btn-light border text-secondary fw-medium px-3 py-2"
+                                onclick="switchTab(3, this)">Collection History (0)</button>
+                            <button class="salesman-tab btn btn-sm btn-light border text-secondary fw-medium px-3 py-2"
+                                onclick="switchTab(4, this)">Return History (0)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Tab Content Tables / No Data Found -->
+                <div class="card border-0 shadow-xs">
+                    <div id="tableContainer" class="card-body p-0">
+                        <!-- Content will be rendered dynamically via JavaScript -->
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- ==========================================
+       MODAL: SALESMAN FAST ORDER DISPATCH (3-STEP)
+       ========================================== -->
+        <div class="modal fade" id="fastOrderModal" tabindex="-1" aria-labelledby="fastOrderModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0 shadow-lg">
+                    <div class="modal-header bg-dark text-white py-2 px-3 align-items-center">
+                        <div>
+                            <h6 class="modal-title fw-bold mb-0 fs-6" id="fastOrderModalLabel">SALESMAN FAST ORDER
+                                DISPATCH
+                            </h6>
+                            <small class="text-secondary" style="font-size: 10px;">3-Step B2B Wholesale Order
+                                Processing</small>
+                        </div>
+
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 50px;">
+                            <!-- Step Indicator Header -->
+                            <div class="d-flex gap-1 text-white small" style="font-size: 11px;">
+                                <span id="stepIndicator1" class="badge bg-secondary px-2 py-1">1. Customer</span>
+                                <span id="stepIndicator2" class="badge bg-emerald px-2 py-1">2. Products (1)</span>
+                                <span id="stepIndicator3" class="badge bg-secondary px-2 py-1">3. Review</span>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+
+                    </div>
+
+                    <div class="modal-body p-4" style="min-height: 320px;">
+
+                        <!-- SUCCESS MESSAGE ALERT (Hidden by default) -->
+                        <div id="orderSuccessAlert" class="alert alert-success text-center py-5 d-none">
+                            <div class="mb-3">
+                                <i data-lucide="check-circle" class="text-success"
+                                    style="width: 64px; height: 64px;"></i>
+                            </div>
+                            <h4 class="h4 fw-bold text-success mb-2">Order Successfully Placed!</h4>
+                            <p class="text-muted mb-0" style="font-size: 14px;">The order has been dispatched and
+                                inventory
+                                updated successfully.</p>
+                        </div>
+
+                        <!-- STEP 1 CONTAINER -->
+                        <div id="orderStep1" class="order-step">
+                            <h6 class="fw-bold text-dark mb-3">STEP 1: SELECT CUSTOMER</h6>
+                            <div class="p-3 border rounded bg-light mb-3">
+                                <div class="fw-bold text-dark">test (Dhanmondi)</div>
+                                <small class="text-muted">Current Due: ৳0 • Credit Limit: ৳50,000</small>
+                            </div>
+                        </div>
+
+                        <!-- STEP 2 CONTAINER -->
+                        <div id="orderStep2" class="order-step">
+                            <div
+                                class="d-flex justify-content-between align-items-center bg-light p-2 rounded mb-3 border">
+                                <div>
+                                    <span class="fw-bold text-dark small">test (Dhanmondi)</span>
+                                    <div class="text-muted" style="font-size: 11px;">Current Due: ৳0 | Credit Limit:
+                                        ৳50,000
+                                    </div>
+                                </div>
+                                <a href="#" class="text-emerald text-decoration-none small fw-semibold">Change</a>
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-sm mb-2"
+                                    placeholder="Search available product by name, brand or SKU...">
+                                <small class="text-muted" style="font-size: 10px;">Wholesale Price applies. Price is
+                                    non-negotiable.</small>
+                            </div>
+
+                            <!-- Product Item Row -->
+                            <div
+                                class="border rounded p-2 mb-2 bg-white d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=100&auto=format&fit=crop&q=60"
+                                        alt="Product" class="rounded border"
+                                        style="width: 40px; height: 40px; object-fit: cover;">
+                                    <div>
+                                        <div class="fw-bold text-dark small">test</div>
+                                        <small class="text-muted font-mono" style="font-size: 10px;">AD • Unit: Bag •
+                                            Available: 2 Bags</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="fw-bold text-dark small">৳2</span>
+                                    <div class="input-group input-group-sm" style="width: 90px;">
+                                        <button class="btn btn-outline-secondary px-2" type="button">-</button>
+                                        <input type="text" class="form-control text-center p-1" value="1">
+                                        <button class="btn btn-outline-secondary px-2" type="button">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3 CONTAINER -->
+                        <div id="orderStep3" class="order-step d-none">
+                            <h6 class="fw-bold text-dark mb-2" style="font-size: 12px;">STEP 3: REVIEW ORDER & AUTOMATIC
+                                CREDIT EVALUATION</h6>
+
+                            <div class="table-responsive border rounded mb-3">
+                                <table class="table table-sm align-middle mb-0 bg-white" style="font-size: 12px;">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Unit</th>
+                                            <th>Quantity</th>
+                                            <th>Rate</th>
+                                            <th class="text-end">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-semibold">test</td>
+                                            <td>Bag</td>
+                                            <td>1</td>
+                                            <td>৳2</td>
+                                            <td class="text-end fw-bold">৳2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="alert alert-success py-2 px-3 mb-3 d-flex align-items-center gap-2"
+                                style="font-size: 11px;">
+                                <i data-lucide="check-circle" class="icon-sm text-success"></i>
+                                <span class="fw-bold text-success">CREDIT LIMIT VERIFIED — ORDER WILL BE
+                                    SUBMITTED</span>
+                            </div>
+
+                            <div class="row g-2 bg-light p-2 rounded border text-center font-mono"
+                                style="font-size: 11px;">
+                                <div class="col-3">
+                                    <span class="text-muted d-block" style="font-size: 9px;">CURRENT DUE</span>
+                                    <span class="fw-bold text-dark">৳0</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="text-muted d-block" style="font-size: 9px;">NEW ORDER</span>
+                                    <span class="fw-bold text-emerald">৳2</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="text-muted d-block" style="font-size: 9px;">PROJECTED DUE</span>
+                                    <span class="fw-bold text-danger">৳2</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="text-muted d-block" style="font-size: 9px;">CREDIT LIMIT</span>
+                                    <span class="fw-bold text-dark">৳50,000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer bg-light py-2 justify-content-between">
+                        <div>
+                            <button type="button" id="prevBtn" class="btn btn-outline-secondary btn-sm px-3 d-none"
+                                onclick="changeStep(-1)">← Back</button>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="text-muted small font-mono" id="modalTotalText">Total: ৳2</span>
+                            <button type="button" id="nextBtn" class="btn btn-emerald btn-sm px-4 text-white bg-emerald"
+                                onclick="changeStep(1)">Next: Review Order (1) →</button>
+                            <button type="button" id="submitBtn" class="btn btn-success btn-sm px-4 d-none"
+                                onclick="submitOrder()">✓ Confirm & Submit Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ==========================================
+       MODAL 1: REGISTER NEW B2B CUSTOMER
+       ========================================== -->
+        <div class="modal fade" id="registerCustomerModal" tabindex="-1" aria-labelledby="registerCustomerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0 shadow-lg">
+                    <div class="modal-header bg-dark text-white py-3">
+                        <div>
+                            <h5 class="modal-title h6 fw-bold" id="registerCustomerModalLabel">REGISTER NEW B2B CUSTOMER
+                            </h5>
+                            <small class="text-secondary" style="font-size: 11px;">Customer code is generated
+                                automatically
+                                (NSM-CUST-XXXX)</small>
+                        </div>
+                        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4" style="max-height: calc(100vh - 180px); overflow-y: auto;">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold">Shopkeeper / Shop Photo (Optional)</label>
+                                <div class="border border-dashed rounded p-3 text-center bg-light">
+                                    <i data-lucide="camera" class="text-muted mb-1"
+                                        style="width: 24px; height: 24px;"></i>
+                                    <div class="fw-medium small text-dark">Upload Shop / Proprietor Photo</div>
+                                    <small class="text-muted d-block mb-2" style="font-size: 11px;">Select from Galery
+                                        or
+                                        take live photo via Camera</small>
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <button type="button" class="btn btn-outline-secondary btn-sm px-3"
+                                            style="font-size: 11px;"><i data-lucide="image" class="icon-xs me-1"></i>
+                                            Gallery / Pick Photo</button>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm px-3"
+                                            style="font-size: 11px;"><i data-lucide="camera" class="icon-xs me-1"></i>
+                                            Camera</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="form-label small fw-semibold">Shop Name *</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                        placeholder="e.g. Al-Madina Store">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Owner / Proprietor Name *</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                        placeholder="e.g. Md. Nasiruddin">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Mobile Phone *</label>
+                                    <input type="text" class="form-control form-control-sm font-mono"
+                                        placeholder="017XX-XXXXXX">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Area / Route *</label>
+                                    <select class="form-select form-select-sm">
+                                        <option selected>Dhanmondi</option>
+                                        <option>Mohammadpur</option>
+                                        <option>Mirpur</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Assigned Salesman</label>
+                                    <select class="form-select form-select-sm">
+                                        <option selected>Rafiqul Islam (Dhanmondi & Mo...)</option>
+                                        <option>Tariqul Alam (Mirpur & Uttara)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-semibold">Shop Address *</label>
+                                    <input type="text" class="form-control form-control-sm"
+                                        placeholder="e.g. Road 4, Plot 12, West Dhanmondi">
+                                </div>
+                                <div class="col-12">
+                                    <div class="p-3 border rounded bg-light">
+                                        <div class="d-flex align-items-center gap-2 mb-1">
+                                            <i data-lucide="map-pin" class="icon-sm text-primary"></i>
+                                            <span class="fw-bold small text-dark">দোকানের GPS লোকেশন (Smart
+                                                Delivery)</span>
+                                        </div>
+                                        <p class="text-muted mb-2" style="font-size: 11px;">দোকানে অবস্থানকালে মোবাইলের
+                                            GPS
+                                            চালু করে নিচের বাটনে চাপ দিন। ডেলিভারি ম্যান সরাসরি গুগল ম্যাপে নেভিগেট করে
+                                            এই
+                                            দোকানে পৌঁছাতে পারবে।</p>
+                                        <button type="button" class="btn btn-dark btn-sm px-3 text-white fw-medium"
+                                            style="font-size: 11px;">
+                                            <i data-lucide="crosshair" class="icon-xs me-1"></i> বর্তমান GPS লোকেশন
+                                            সংরক্ষণ
+                                            করুন
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Credit Limit (৳) *</label>
+                                    <input type="number" class="form-control form-control-sm font-mono" value="50000">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Opening Due (৳)</label>
+                                    <input type="number" class="form-control form-control-sm font-mono" value="0">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer bg-light py-2">
+                        <button type="button" class="btn btn-outline-secondary btn-sm px-3"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-emerald btn-sm px-3 text-white bg-emerald">Register
+                            Customer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+   
+</body>
+
+</html>

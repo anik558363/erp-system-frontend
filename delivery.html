@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOOR SUPER MART - Delivery Fleet & Field Collection Dispatch</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Header Navbar -->
+    <header
+        class="top-header bg-white border-bottom sticky-top px-3 py-2 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-2 gap-md-3">
+            <button class="btn btn-sm btn-outline-secondary d-lg-none" id="sidebarToggle" type="button">
+                <i data-lucide="menu" class="icon-sm"></i>
+            </button>
+            <div>
+                <h1 class="h6 fw-bold mb-0 text-dark d-none d-md-block text-truncate" style="max-width: 150px;">NOOR
+                    SUPER MART</h1>
+                <small class="text-muted d-none d-sm-block" style="font-size: 10px; letter-spacing: 0.5px;">B2B
+                    DISTRIBUTION SYSTEM</small>
+            </div>
+            <div class="vr mx-2 d-none d-md-block"></div>
+            <div class="d-none d-md-flex align-items-center gap-1 text-muted small">
+                <span>Active Module:</span>
+                <strong class="text-dark">Delivery</strong>
+            </div>
+        </div>
+
+        <div class="d-none d-xl-flex align-items-center gap-3">
+            <span
+                class="badge bg-emerald-subtle text-emerald border border-emerald-subtle rounded-pill px-3 py-1 fw-medium d-flex align-items-center gap-2">
+                <span class="status-dot"></span> Haji Noor Mohammad
+            </span>
+            <span class="text-muted small font-mono">Central HQ / All Zones</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+            <div class="bg-light border rounded px-2 py-1 d-flex align-items-center gap-2">
+                <span class="text-muted small d-none d-sm-inline"><i data-lucide="repeat" class="icon-xs me-1"></i>Role
+                    Switch:</span>
+                <select
+                    class="form-select form-select-sm border-0 bg-transparent fw-semibold text-dark py-0 ps-1 pe-4 shadow-none"
+                    style="width: auto; font-size: 12px;">
+                    <option>Haji Noor Mohammad (Owner / Admin)</option>
+                    <option>Depot Manager</option>
+                    <option>Sales Executive</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-wrapper d-flex">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar bg-slate-900 text-white d-flex flex-column justify-content-between" id="sidebar">
+            <div>
+                <div class="p-3 border-bottom border-secondary border-opacity-25 d-flex align-items-center gap-2">
+                    <div
+                        class="brand-badge bg-emerald text-white fw-bold rounded d-flex align-items-center justify-content-center">
+                        NSM
+                    </div>
+                    <div>
+                        <div class="fw-bold small lh-1">NOOR SUPER MART</div>
+                        <small class="text-secondary" style="font-size: 10px;">B2B Core ERP v1.0</small>
+                    </div>
+                </div>
+
+                <div class="p-3">
+                    <div class="role-card p-2 rounded bg-slate-800 border border-secondary border-opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-secondary" style="font-size: 10px; font-weight: 600;">ACTIVE ROLE</span>
+                            <span class="badge bg-emerald text-white" style="font-size: 9px;">OWNER</span>
+                        </div>
+                        <div class="fw-semibold small text-white">Haji Noor Mohammad</div>
+                    </div>
+                </div>
+
+                <div class="px-2">
+                    <div class="text-secondary px-2 mb-1"
+                        style="font-size: 10px; font-weight: 600; letter-spacing: 0.5px;">MAIN NAVIGATION</div>
+                    <ul class="nav flex-column sidebar-nav gap-1">
+                        <li class="nav-item"><a href="index.html" class="nav-link"><i data-lucide="layout-dashboard"
+                                    class="icon-sm me-2"></i>Dashboard</a></li>
+                        <li class="nav-item"><a href="products.html" class="nav-link"><i data-lucide="package"
+                                    class="icon-sm me-2"></i>Products</a><span
+                                class="badge rounded-pill bg-warning text-dark">2</span></li>
+                        <li class="nav-item"><a href="purchase.html" class="nav-link"><i data-lucide="shopping-bag"
+                                    class="icon-sm me-2"></i>Purchase</a></li>
+                        <li class="nav-item"><a href="stock.html" class="nav-link"><i data-lucide="boxes"
+                                    class="icon-sm me-2"></i>Stock</a></li>
+                        <li class="nav-item"><a href="customers.html" class="nav-link"><i data-lucide="users"
+                                    class="icon-sm me-2"></i>Customers</a></li>
+                        <li class="nav-item"><a href="salesmen.html" class="nav-link"><i data-lucide="user-check"
+                                    class="icon-sm me-2"></i>Salesmen</a></li>
+                        <li class="nav-item"><a href="orders.html" class="nav-link"><i data-lucide="clipboard-list"
+                                    class="icon-sm me-2"></i>Orders</a><span
+                                class="badge rounded-pill bg-warning text-dark">10</span></li>
+                        <li class="nav-item">
+                            <a href="delivery.html"
+                                class="nav-link active d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="truck" class="icon-sm me-2"></i>Delivery</span>
+                                <span class="badge rounded-pill bg-warning text-dark">1</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i data-lucide="rotate-ccw"
+                                    class="icon-sm me-2"></i>Returns</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i data-lucide="credit-card"
+                                    class="icon-sm me-2"></i>Payments</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i data-lucide="book-open"
+                                    class="icon-sm me-2"></i>Ledger</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i data-lucide="receipt"
+                                    class="icon-sm me-2"></i>Expenses (খরচ)</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i data-lucide="bar-chart-2"
+                                    class="icon-sm me-2"></i>Reports</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i data-lucide="user-cog"
+                                    class="icon-sm me-2"></i>Users</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i data-lucide="settings"
+                                    class="icon-sm me-2"></i>Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p-3 border-top border-secondary border-opacity-25 mt-3">
+                <div class="d-flex align-items-center gap-2 text-emerald small fw-medium mb-1" style="font-size: 11px;">
+                    <i data-lucide="refresh-cw" class="icon-xs"></i> Automatic Ledger Sync
+                </div>
+                <p class="text-secondary mb-0" style="font-size: 10px; line-height: 1.3;">
+                    Single-entry system. No manual ledger calculation required.
+                </p>
+            </div>
+        </aside>
+
+        <!-- Sidebar Backdrop for Mobile -->
+        <div class="sidebar-backdrop d-lg-none" id="sidebarBackdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content flex-grow-1 p-3 p-md-4 bg-light-subtle">
+            <div class="container-fluid px-0" style="max-width: 1400px;">
+
+                <!-- Top Header Banner -->
+                <div class="card border-0 shadow-xs mb-4">
+                    <div
+                        class="card-body p-3 p-md-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                        <div>
+                            <h2 class="h5 fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+                                <i data-lucide="truck" class="text-emerald"></i> DELIVERY FLEET & FIELD COLLECTION
+                                DISPATCH
+                            </h2>
+                            <p class="text-muted small mb-0">দোকانের অবস্থান, জিপিএস নেভিগেশন (Google Maps), পণ্য
+                                ডেলিভারি এবং ক্যাশ কালেকশন ব্যবস্থাপনা।</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-dark btn-sm px-3 py-2 fw-medium shadow-xs">Pending Delivery
+                                (1)</button>
+                            <button class="btn btn-light border text-secondary btn-sm px-3 py-2 fw-medium">Delivered /
+                                Completed (1)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search & Filter Section -->
+                <div class="card border-0 shadow-xs mb-4">
+                    <div class="card-body p-3">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-8">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-text bg-white border-end-0 text-muted">
+                                        <i data-lucide="search" class="icon-sm"></i>
+                                    </span>
+                                    <input type="text" class="form-control border-start-0 ps-0 shadow-none"
+                                        placeholder="Search by Shop Name, ID, Proprietor, Mobile, or Address...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <select class="form-select form-select-sm">
+                                    <option selected>All Areas / Villages (সব এলাকা)</option>
+                                    <option>Dhanmondi</option>
+                                    <option>Mohammadpur</option>
+                                    <option>Mirpur</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delivery Card Section -->
+                <div class="row g-3">
+                    <div class="col-12 col-lg-8 col-xl-6">
+                        <div class="card border-0 shadow-xs">
+                            <div class="card-body p-3 p-md-4">
+                                <!-- Order Header Badge -->
+                                <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+                                    <span class="font-mono fw-bold text-dark"
+                                        style="font-size: 12px;">NSM-ORD-261103-178 <small
+                                            class="text-muted fw-normal">ID: NSM-CUST-1001</small></span>
+                                    <span
+                                        class="badge bg-warning-subtle text-warning-emphasis border font-mono px-2 py-1"
+                                        style="font-size: 10px;">DISPATCHED</span>
+                                </div>
+
+                                <!-- Shop Profile Row -->
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=100&auto=format&fit=crop&q=60"
+                                            alt="Shop" class="rounded border"
+                                            style="width: 50px; height: 50px; object-fit: cover;">
+                                        <div>
+                                            <h4 class="h6 fw-bold text-dark mb-0">test</h4>
+                                            <small class="text-muted" style="font-size: 11px;">Proprietor: test</small>
+                                        </div>
+                                    </div>
+                                    <a href="tel:01931654590"
+                                        class="btn btn-emerald btn-sm px-3 py-1 text-white bg-emerald d-flex align-items-center gap-1"
+                                        style="font-size: 11px;">
+                                        <i data-lucide="phone" class="icon-xs"></i> কল করুন (01931654590)
+                                    </a>
+                                </div>
+
+                                <!-- Address Box -->
+                                <div class="bg-light p-2.5 rounded border mb-3 small" style="font-size: 12px;">
+                                    <div class="text-dark mb-1"><strong class="text-secondary">ঠিকানা:</strong> test
+                                    </div>
+                                    <div class="text-muted">গ্রাম/এলাকা: Dhanmondi</div>
+                                </div>
+
+                                <!-- GPS Warning Box -->
+                                <div class="p-2.5 rounded border border-warning bg-warning-subtle mb-3 text-warning-emphasis small d-flex align-items-center justify-content-between"
+                                    style="font-size: 11px;">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i data-lucide="alert-circle" class="icon-xs"></i>
+                                        <span>GPS লোকেশন সংরক্ষিত নেই</span>
+                                    </div>
+                                    <a href="#" class="text-decoration-none fw-semibold text-primary"
+                                        style="font-size: 11px;">ঠিকানা দিয়ে Google Maps-এ অনুসন্ধান করুন &rarr;</a>
+                                </div>
+
+                                <!-- Ordered Items List Box -->
+                                <div class="border rounded p-2 mb-3 bg-white">
+                                    <div class="d-flex justify-content-between align-items-center mb-2 pb-1 border-bottom"
+                                        style="font-size: 11px;">
+                                        <span class="fw-bold text-muted">অর্ডারকৃত মালামাল (1 ITEMS)</span>
+                                        <span class="text-muted font-mono">qty & packet</span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between"
+                                        style="font-size: 12px;">
+                                        <div>
+                                            <div class="fw-bold text-dark">test</div>
+                                            <small class="text-muted font-mono" style="font-size: 10px;">SKU: AD &bull;
+                                                ৳2/Bag</small>
+                                        </div>
+                                        <div class="text-end font-mono">
+                                            <span class="fw-bold text-dark">2 Bag</span><br>
+                                            <span class="text-muted" style="font-size: 11px;">৳4</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Financial Totals Box -->
+                                <div class="row g-2 text-center mb-3 font-mono" style="font-size: 11px;">
+                                    <div class="col-6 bg-light p-2 rounded border">
+                                        <span class="text-muted d-block" style="font-size: 9px;">Order Grand
+                                            Total</span>
+                                        <span class="h6 fw-bold text-dark mb-0">৳4</span>
+                                    </div>
+                                    <div class="col-6 bg-light p-2 rounded border">
+                                        <span class="text-muted d-block" style="font-size: 9px;">Previous Due (পূর্বের
+                                            বকেয়া)</span>
+                                        <span class="h6 fw-bold text-danger mb-0">৳0</span>
+                                    </div>
+                                </div>
+
+                                <!-- Cash to Collect Box -->
+                                <div
+                                    class="p-3 bg-emerald-subtle border border-emerald-subtle rounded mb-3 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <span class="fw-bold text-dark d-block" style="font-size: 11px;">Cash to Collect
+                                            (মোট দেয়)</span>
+                                        <small class="text-muted" style="font-size: 10px;">Current Order + Previous
+                                            Due</small>
+                                    </div>
+                                    <span class="h4 fw-bold text-emerald font-mono mb-0">৳4</span>
+                                </div>
+
+                                <!-- Payment Status Row -->
+                                <div class="d-flex justify-content-between align-items-center mb-3"
+                                    style="font-size: 12px;">
+                                    <span class="text-muted">Payment Status:</span>
+                                    <span
+                                        class="badge bg-warning-subtle text-warning-emphasis border px-2 py-1 font-mono"
+                                        style="font-size: 10px;">Cash on Delivery (বকেয়া সংগ্রহ)</span>
+                                </div>
+
+                                <!-- Action Buttons Footer -->
+                                <div class="d-flex gap-2 pt-2 border-top">
+                                    <button
+                                        class="btn btn-outline-secondary btn-sm px-3 d-flex align-items-center gap-1"
+                                        style="font-size: 12px;">
+                                        <i data-lucide="eye" class="icon-xs"></i> View Challan
+                                    </button>
+                                    <button
+                                        class="btn btn-emerald btn-sm px-4 text-white bg-emerald ms-auto d-flex align-items-center gap-1 fw-semibold"
+                                        style="font-size: 12px;">
+                                        <i data-lucide="check-circle" class="icon-xs"></i> Deliver & Collect (ডেলিভারি)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

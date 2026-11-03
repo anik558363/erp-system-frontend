@@ -389,3 +389,35 @@ function renderTableContent() {
 window.onload = function () {
     renderSalesmanData();
 };
+
+
+// Approval Action Highlight Logic
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const actionApprove = document.getElementById('actionApprove');
+        const actionHold = document.getElementById('actionHold');
+        const actionCancel = document.getElementById('actionCancel');
+
+        function updateApprovalAction() {
+            // Remove border highlights from all cards
+            actionApprove.closest('.col-md-4').querySelector('.p-3').className = "p-3 border rounded bg-white";
+            actionHold.closest('.col-md-4').querySelector('.p-3').className = "p-3 border rounded bg-white";
+            actionCancel.closest('.col-md-4').querySelector('.p-3').className = "p-3 border rounded bg-white";
+
+            // Add active border highlight to selected card
+            if (actionApprove.checked) {
+                actionApprove.closest('.col-md-4').querySelector('.p-3').className = "p-3 border rounded bg-white border-success border-2";
+            } else if (actionHold.checked) {
+                actionHold.closest('.col-md-4').querySelector('.p-3').className = "p-3 border rounded bg-white border-warning border-2";
+            } else if (actionCancel.checked) {
+                actionCancel.closest('.col-md-4').querySelector('.p-3').className = "p-3 border rounded bg-white border-danger border-2";
+            }
+        }
+
+        if(actionApprove && actionHold && actionCancel) {
+            actionApprove.addEventListener('change', updateApprovalAction);
+            actionHold.addEventListener('change', updateApprovalAction);
+            actionCancel.addEventListener('change', updateApprovalAction);
+        }
+    });

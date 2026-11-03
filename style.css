@@ -4,6 +4,8 @@
     --emerald: #10b981;
     --emerald-subtle: #d1fae5;
     --purple: #7c3aed;
+    --bs-emerald: #10b981;
+    --bs-purple: #8b5cf6;
 }
 
 *, *::before, *::after {
@@ -278,6 +280,10 @@ body {
     font-size: 12px !important;
 }
 
+.order-status-filters button{
+    font-size: 12px !important;
+}
+
 
 .category-scroll-container button{
     font-size: 12px;
@@ -382,3 +388,50 @@ body {
     border-radius: 8px;
     margin: 10px 0;
 }
+
+
+.bg-purple {
+    background-color: #8b5cf6 !important;
+}
+
+.text-purple {
+    color: #8b5cf6 !important;
+}
+
+
+/* ==========================================
+   PRINT STYLING FIX FOR INVOICE MODAL
+   ========================================== */
+@media print {
+    /* Hide everything on body by default */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Only show the cash memo modal content */
+    #cashMemoModal, #cashMemoModal * {
+        visibility: visible;
+    }
+
+    #cashMemoModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: white !important;
+    }
+
+    /* Hide close and print buttons inside print view */
+    .modal-header .btn-close,
+    .modal-header .btn-success {
+        display: none !important;
+    }
+
+    .modal-title{
+        display: none !important;
+    }
+}
+
+

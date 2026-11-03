@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOOR SUPER MART - Staff Users & RBAC</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Header Navbar -->
+    <header
+        class="top-header bg-white border-bottom sticky-top px-3 py-2 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-2 gap-md-3">
+            <button class="btn btn-sm btn-outline-secondary d-lg-none" id="sidebarToggle" type="button">
+                <i data-lucide="menu" class="icon-sm"></i>
+            </button>
+            <div>
+                <h1 class="h6 fw-bold mb-0 text-dark d-none d-md-block text-truncate" style="max-width: 150px;">NOOR
+                    SUPER MART</h1>
+                <small class="text-muted d-none d-sm-block" style="font-size: 10px; letter-spacing: 0.5px;">B2B
+                    DISTRIBUTION SYSTEM</small>
+            </div>
+            <div class="vr mx-2 d-none d-md-block"></div>
+            <div class="d-none d-md-flex align-items-center gap-1 text-muted small">
+                <span>Active Module:</span>
+                <strong class="text-dark">Users</strong>
+            </div>
+        </div>
+
+        <div class="d-none d-xl-flex align-items-center gap-3">
+            <span
+                class="badge bg-emerald-subtle text-emerald border border-emerald-subtle rounded-pill px-3 py-1 fw-medium d-flex align-items-center gap-2">
+                <span class="status-dot"></span> Haji Noor Mohammad
+            </span>
+            <span class="text-muted small font-mono">Central HQ / All Zones</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+            <div class="bg-light border rounded px-2 py-1 d-flex align-items-center gap-2">
+                <span class="text-muted small d-none d-sm-inline"><i data-lucide="repeat" class="icon-xs me-1"></i>Role
+                    Switch:</span>
+                <select
+                    class="form-select form-select-sm border-0 bg-transparent fw-semibold text-dark py-0 ps-1 pe-4 shadow-none"
+                    style="width: auto; font-size: 12px;">
+                    <option>Haji Noor Mohammad (Owner / Admin)</option>
+                    <option>Depot Manager</option>
+                    <option>Sales Executive</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-wrapper d-flex">
+         <!-- Sidebar Navigation -->
+        <aside class="sidebar bg-slate-900 text-white d-flex flex-column justify-content-between" id="sidebar">
+            <div>
+                <!-- Brand Box -->
+                <div class="p-3 border-bottom border-secondary border-opacity-25 d-flex align-items-center gap-2">
+                    <div
+                        class="brand-badge bg-emerald text-white fw-bold rounded d-flex align-items-center justify-content-center">
+                        NSM
+                    </div>
+                    <div>
+                        <div class="fw-bold small lh-1">NOOR SUPER MART</div>
+                        <small class="text-secondary" style="font-size: 10px;">B2B Core ERP v1.0</small>
+                    </div>
+                </div>
+
+                <!-- Active Role Box -->
+                <div class="p-3">
+                    <div class="role-card p-2 rounded bg-slate-800 border border-secondary border-opacity-25">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-secondary" style="font-size: 10px; font-weight: 600;">ACTIVE ROLE</span>
+                            <span class="badge bg-emerald text-white" style="font-size: 9px;">OWNER</span>
+                        </div>
+                        <div class="fw-semibold small text-white">Haji Noor Mohammad</div>
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="px-2">
+                    <div class="text-secondary px-2 mb-1"
+                        style="font-size: 10px; font-weight: 600; letter-spacing: 0.5px;">MAIN NAVIGATION</div>
+                    <ul class="nav flex-column sidebar-nav gap-1">
+                        <li class="nav-item">
+                            <a href="index.html"
+                                class="nav-link  d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="layout-dashboard" class="icon-sm me-2"></i>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="products.html" class="nav-link d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="package" class="icon-sm me-2"></i>Products</span>
+                                <span class="badge rounded-pill bg-warning text-dark">2</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="purchase.html" class="nav-link"><i data-lucide="shopping-bag"
+                                    class="icon-sm me-2"></i>Purchase</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="stock.html" class="nav-link"><i data-lucide="boxes"
+                                    class="icon-sm me-2"></i>Stock</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customers.html" class="nav-link"><i data-lucide="users"
+                                    class="icon-sm me-2"></i>Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="salesmen.html" class="nav-link"><i data-lucide="user-check"
+                                    class="icon-sm me-2"></i>Salesmen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="orders.html" class="nav-link d-flex align-items-center justify-content-between">
+                                <span><i data-lucide="clipboard-list" class="icon-sm me-2"></i>Orders</span>
+                                <span class="badge rounded-pill bg-warning text-dark">1</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="delivery.html" class="nav-link"><i data-lucide="truck"
+                                    class="icon-sm me-2"></i>Delivery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="returns.html" class="nav-link"><i data-lucide="rotate-ccw"
+                                    class="icon-sm me-2"></i>Returns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="payments.html" class="nav-link"><i data-lucide="credit-card"
+                                    class="icon-sm me-2"></i>Payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="ledger.html" class="nav-link"><i data-lucide="book-open"
+                                    class="icon-sm me-2"></i>Ledger</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="expenses.html" class="nav-link"><i data-lucide="receipt"
+                                    class="icon-sm me-2"></i>Expenses
+                                (খরচ)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reports.html" class="nav-link"><i data-lucide="bar-chart-2"
+                                    class="icon-sm me-2"></i>Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="users.html" class="nav-link active"><i data-lucide="user-cog"
+                                    class="icon-sm me-2"></i>Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="settings.html" class="nav-link"><i data-lucide="settings"
+                                    class="icon-sm me-2"></i>Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar Footer -->
+            <div class="p-3 border-top border-secondary border-opacity-25 mt-3">
+                <div class="d-flex align-items-center gap-2 text-emerald small fw-medium mb-1" style="font-size: 11px;">
+                    <i data-lucide="refresh-cw" class="icon-xs"></i> Automatic Ledger Sync
+                </div>
+                <p class="text-secondary mb-0" style="font-size: 10px; line-height: 1.3;">
+                    Single-entry system. No manual ledger calculation required.
+                </p>
+            </div>
+        </aside>
+
+        <!-- Sidebar Backdrop for Mobile -->
+        <div class="sidebar-backdrop d-lg-none" id="sidebarBackdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content flex-grow-1 p-3 p-md-4 bg-light-subtle">
+            <div class="container-fluid px-0" style="max-width: 1400px;">
+
+                <!-- Top Header Banner -->
+                <div class="card border-0 shadow-xs mb-4">
+                    <div class="card-body p-4">
+                        <h2 class="h5 fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+                            <i data-lucide="shield" class="text-emerald"></i> STAFF USERS & ROLE-BASED ACCESS CONTROL
+                            (RBAC)
+                        </h2>
+                        <p class="text-muted small mb-0">Strict 5-role architecture (Section 2 & 34) preventing
+                            unauthorized price or financial edits.</p>
+                    </div>
+                </div>
+
+                <!-- Users Cards Grid -->
+                <div class="row g-3 mb-4">
+                    <!-- User 1: Owner -->
+                    <div class="col-12 col-md-4">
+                        <div class="card border-2 border-success shadow-xs h-100 bg-white">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-dark text-white font-mono"
+                                            style="font-size: 9px;">OWNER</span>
+                                        <span class="badge bg-success-subtle text-success border font-mono"
+                                            style="font-size: 9px;">Active Session</span>
+                                    </div>
+                                    <h5 class="fw-bold text-dark mb-1">Haji Noor Mohammad</h5>
+                                    <p class="text-muted small mb-3 font-mono">owner@noorsupermart.com</p>
+                                    <div class="text-muted font-mono" style="font-size: 11px; line-height: 1.5;">
+                                        Mobile: 01711-000001<br>
+                                        Territory: Central HQ / All Zones<br>
+                                        Joined: 2020-01-01
+                                    </div>
+                                </div>
+                                <div class="mt-4 pt-3 border-top">
+                                    <button
+                                        class="btn btn-dark btn-sm w-100 fw-medium d-flex align-items-center justify-content-center gap-1 shadow-xs">
+                                        <i data-lucide="user-check" class="icon-xs"></i> Switch to this User
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User 2: Office -->
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0 shadow-xs h-100 bg-white">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-secondary text-white font-mono"
+                                            style="font-size: 9px;">OFFICE</span>
+                                    </div>
+                                    <h5 class="fw-bold text-dark mb-1">Mohammad Faruk</h5>
+                                    <p class="text-muted small mb-3 font-mono">accounts@noorsupermart.com</p>
+                                    <div class="text-muted font-mono" style="font-size: 11px; line-height: 1.5;">
+                                        Mobile: 01819-223344<br>
+                                        Territory: Head Office Accounts<br>
+                                        Joined: 2021-03-15
+                                    </div>
+                                </div>
+                                <div class="mt-4 pt-3 border-top">
+                                    <button
+                                        class="btn btn-dark btn-sm w-100 fw-medium d-flex align-items-center justify-content-center gap-1 shadow-xs">
+                                        <i data-lucide="user-check" class="icon-xs"></i> Switch to this User
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User 3: Manager -->
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0 shadow-xs h-100 bg-white">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-secondary text-white font-mono"
+                                            style="font-size: 9px;">MANAGER</span>
+                                    </div>
+                                    <h5 class="fw-bold text-dark mb-1">Anisur Rahman</h5>
+                                    <p class="text-muted small mb-3 font-mono">manager@noorsupermart.com</p>
+                                    <div class="text-muted font-mono" style="font-size: 11px; line-height: 1.5;">
+                                        Mobile: 01844-332211<br>
+                                        Territory: Central Mart Operations<br>
+                                        Joined: 2021-05-10
+                                    </div>
+                                </div>
+                                <div class="mt-4 pt-3 border-top">
+                                    <button
+                                        class="btn btn-dark btn-sm w-100 fw-medium d-flex align-items-center justify-content-center gap-1 shadow-xs">
+                                        <i data-lucide="user-check" class="icon-xs"></i> Switch to this User
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role Permission Matrix Section -->
+                <div class="card border-0 shadow-xs">
+                    <div class="card-header bg-white py-3 px-4">
+                        <h6 class="fw-bold text-dark mb-1" style="font-size: 13px;">ROLE PERMISSION MATRIX (SECTION 34
+                            SPECIFICATION)</h6>
+                        <p class="text-muted small mb-0">Salesmen and Delivery staff are prohibited from modifying
+                            prices, ledgers, or deleting transactions.</p>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table align-middle mb-0 custom-table text-nowrap" style="font-size: 11px;">
+                                <thead class="table-light font-mono">
+                                    <tr>
+                                        <th class="py-3 px-4">System Operation / Module</th>
+                                        <th class="py-3 text-center">Owner / Admin</th>
+                                        <th class="py-3 text-center">Office / Accounts</th>
+                                        <th class="py-3 text-center">Salesman</th>
+                                        <th class="py-3 text-center">Warehouse</th>
+                                        <th class="py-3 text-center">Delivery Man</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold text-dark px-4">Dashboard (Executive KPI)</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold text-dark px-4">Products Catalog (Wholesale View)</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold text-dark px-4">Product Price Edit & Setup</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold text-dark px-4">Purchase Receive (Supplier Stock In)</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold text-dark px-4">Warehouse Stock & Adjustments</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold text-dark px-4">Customer Management (Create Shop)</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold text-dark px-4">Order Placement (3-Step Fast Entry)</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold text-dark px-4">Office Order Approval (Hold/Cancel)</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold text-dark px-4">Warehouse Packing & Dispatch</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                        <td class="text-center text-success fw-bold">&#10003;</td>
+                                        <td class="text-center text-muted">&#10005;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -8,7 +8,9 @@
     --bs-purple: #8b5cf6;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -25,19 +27,43 @@ body {
     font-family: 'JetBrains Mono', monospace;
 }
 
-.bg-slate-900 { background-color: var(--slate-900); }
-.bg-slate-800 { background-color: var(--slate-800); }
-.bg-emerald { background-color: var(--emerald); }
-.bg-emerald-subtle { background-color: var(--emerald-subtle); }
-.text-emerald { color: var(--emerald) !important; }
-.text-purple { color: var(--purple) !important; }
+.bg-slate-900 {
+    background-color: var(--slate-900);
+}
+
+.bg-slate-800 {
+    background-color: var(--slate-800);
+}
+
+.bg-emerald {
+    background-color: var(--emerald);
+}
+
+.bg-emerald-subtle {
+    background-color: var(--emerald-subtle);
+}
+
+.text-emerald {
+    color: var(--emerald) !important;
+}
+
+.text-purple {
+    color: var(--purple) !important;
+}
 
 .shadow-xs {
     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
-.icon-xs { width: 14px; height: 14px; }
-.icon-sm { width: 16px; height: 16px; }
+.icon-xs {
+    width: 14px;
+    height: 14px;
+}
+
+.icon-sm {
+    width: 16px;
+    height: 16px;
+}
 
 .status-dot {
     width: 7px;
@@ -161,9 +187,11 @@ body {
         box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
         z-index: 1040;
     }
+
     .sidebar.show {
         transform: translateX(0);
     }
+
     .sidebar-backdrop {
         position: fixed;
         inset: 56px 0 0 0;
@@ -171,12 +199,15 @@ body {
         z-index: 1035;
         display: none;
     }
+
     .sidebar-backdrop.show {
         display: block;
     }
+
     .ops-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
     .perf-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -187,14 +218,17 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
     }
+
     .perf-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
+
     .top-header {
         padding-left: 8px !important;
         padding-right: 8px !important;
     }
+
     .main-content {
         padding: 10px !important;
     }
@@ -206,15 +240,18 @@ body {
         grid-template-columns: 1fr;
         gap: 8px;
     }
+
     .perf-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 8px;
     }
+
     .container-fluid {
         padding-left: 4px !important;
         padding-right: 4px !important;
     }
+
     .card-body {
         padding: 10px !important;
     }
@@ -242,7 +279,8 @@ body {
 }
 
 .category-scroll-container .btn {
-    flex: 0 0 auto; /* Prevents buttons from shrinking */
+    flex: 0 0 auto;
+    /* Prevents buttons from shrinking */
     white-space: nowrap;
 }
 
@@ -254,7 +292,8 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-.btn-emerald:hover, .btn-emerald:focus {
+.btn-emerald:hover,
+.btn-emerald:focus {
     background-color: #059669 !important;
     border-color: #059669 !important;
     color: #ffffff !important;
@@ -264,7 +303,8 @@ body {
 
 /* Product Card Image Full Width & Height Cover Fix */
 .product-img-wrap {
-    height: 180px; /* Adjust height if needed */
+    height: 180px;
+    /* Adjust height if needed */
     overflow: hidden;
     background-color: #f8fafc;
 }
@@ -272,40 +312,43 @@ body {
 .product-img-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Eta image ke stretch na kore pura container fill korbe */
+    object-fit: cover;
+    /* Eta image ke stretch na kore pura container fill korbe */
 }
 
 
-.purchase-status-filter button{
+.purchase-status-filter button {
     font-size: 12px !important;
 }
 
-.order-status-filters button{
+.order-status-filters button {
     font-size: 12px !important;
 }
 
-.return-type-filters button{
+.return-type-filters button {
     font-size: 12px !important;
 }
 
-.payment-filters-section button{
+.payment-filters-section button {
     font-size: 12px !important;
 }
 
 
-.category-scroll-container button{
+.category-scroll-container button {
     font-size: 12px;
 }
 
 /* Standard & Compact Modal Styling */
 .modal-dialog {
-    max-width: 650px !important; /* Modal er width control korar jonno */
+    max-width: 650px !important;
+    /* Modal er width control korar jonno */
     margin: 1.75rem auto;
 }
 
 .modal-body {
     max-height: calc(100vh - 200px);
-    overflow-y: auto; /* Jodi content beshi hoy tahole vitore scroll hobe, modal boro hobe na */
+    overflow-y: auto;
+    /* Jodi content beshi hoy tahole vitore scroll hobe, modal boro hobe na */
     padding: 1.25rem !important;
 }
 
@@ -317,7 +360,7 @@ body {
     padding: 0.75rem 1.25rem !important;
 }
 
-.modal-body .form-control-sm, 
+.modal-body .form-control-sm,
 .modal-body .form-select-sm {
     padding: 0.35rem 0.5rem;
     font-size: 12px;
@@ -326,13 +369,15 @@ body {
 
 /* Standard & Compact Modal Styling */
 .modal-dialog {
-    max-width: 650px !important; /* Modal er width control korar jonno */
+    max-width: 650px !important;
+    /* Modal er width control korar jonno */
     margin: 1.75rem auto;
 }
 
 .modal-body {
     max-height: calc(100vh - 200px);
-    overflow-y: auto; /* Jodi content beshi hoy tahole vitore scroll hobe, modal boro hobe na */
+    overflow-y: auto;
+    /* Jodi content beshi hoy tahole vitore scroll hobe, modal boro hobe na */
     padding: 1.25rem !important;
 }
 
@@ -344,7 +389,7 @@ body {
     padding: 0.75rem 1.25rem !important;
 }
 
-.modal-body .form-control-sm, 
+.modal-body .form-control-sm,
 .modal-body .form-select-sm {
     padding: 0.35rem 0.5rem;
     font-size: 12px;
@@ -354,7 +399,8 @@ body {
 
 /* Standard & Compact Modal Styling Fix */
 .modal-dialog {
-    max-width: 900px !important; /* Standard width for large purchase modal */
+    max-width: 900px !important;
+    /* Standard width for large purchase modal */
     margin: 1.5rem auto;
 }
 
@@ -377,7 +423,7 @@ body {
     padding: 0.75rem 1.25rem !important;
 }
 
-.modal-body .form-control-sm, 
+.modal-body .form-control-sm,
 .modal-body .form-select-sm {
     padding: 0.35rem 0.5rem;
     font-size: 12px;
@@ -411,13 +457,15 @@ body {
    PRINT STYLING FIX FOR INVOICE MODAL
    ========================================== */
 @media print {
+
     /* Hide everything on body by default */
     body * {
         visibility: hidden;
     }
 
     /* Only show the cash memo modal content */
-    #cashMemoModal, #cashMemoModal * {
+    #cashMemoModal,
+    #cashMemoModal * {
         visibility: visible;
     }
 
@@ -437,7 +485,7 @@ body {
         display: none !important;
     }
 
-    .modal-title{
+    .modal-title {
         display: none !important;
     }
 }
@@ -458,13 +506,15 @@ body {
 
 
 @media print {
+
     /* Hide all dashboard layout elements */
     body * {
         visibility: hidden;
     }
 
     /* Only show the statement card container */
-    .card:has(.table-responsive), .card:has(.table-responsive) * {
+    .card:has(.table-responsive),
+    .card:has(.table-responsive) * {
         visibility: visible;
     }
 
@@ -480,37 +530,48 @@ body {
     }
 
     /* Hide action buttons and sidebar inside print view */
-    .sidebar, .top-header, .btn, .card:not(:has(.table-responsive)) {
+    .sidebar,
+    .top-header,
+    .btn,
+    .card:not(:has(.table-responsive)) {
         display: none !important;
     }
 }
 
 
 
-        @media print {
-            body * {
-                visibility: hidden;
-            }
-            #printableStatement, #printableStatement * {
-                visibility: visible;
-            }
-            #printableStatement {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                margin: 0;
-                padding: 10px;
-                background: white !important;
-                border: none !important;
-                box-shadow: none !important;
-            }
-            .no-print {
-                display: none !important;
-            }
-            /* Prevent unwanted page breaks */
-            table, tr, td, th, .row {
-                page-break-inside: avoid;
-            }
-        }
-    
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printableStatement,
+    #printableStatement * {
+        visibility: visible;
+    }
+
+    #printableStatement {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        background: white !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    /* Prevent unwanted page breaks */
+    table,
+    tr,
+    td,
+    th,
+    .row {
+        page-break-inside: avoid;
+    }
+}
